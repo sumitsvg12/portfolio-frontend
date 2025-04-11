@@ -328,23 +328,28 @@ body {
 .technical {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 2rem 1rem;
 }
 .container1 {
-  width: 50%;
-  height: 500px;
-  padding: 75px 90px;
-  margin-left: 120px;
+  flex: 1 1 400px;
+  max-width: 500px;
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 .row-2{
   width: 50%;
 }
 
 .heading1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
   text-align: center;
-  text-decoration: underline;
-  text-underline-offset: 10px;
-  text-decoration-thickness: 5px;
-  margin-bottom: 50px;
+  color: #333;
+  font-weight: bold;
 }
 .bar {
   font-size: 23px;
@@ -352,7 +357,10 @@ body {
 }
 
 .Technical-bars .bar {
-  margin-top: 40px 0;
+  margin: 1rem 0;
+}
+.Technical-bars .bar .info span {
+  font-weight: 600;
 }
 
 .Technical-bars .bar:first-child {
@@ -363,9 +371,7 @@ body {
   margin-bottom: 0;
 }
 
-.Technical-bars .bar .info {
-  margin-bottom: 0px;
-}
+
 .Technical-bars .bar .info span {
   font-size: 17px;
   font-weight: 500;
@@ -374,10 +380,10 @@ body {
 }
 .progress-line {
   position: relative;
-  border-radius: 10px;
+  height: 8px;
   width: 100%;
-  height: 5px;
-  background-color: #000;
+  background: #ddd;
+  border-radius: 10px;
   overflow: hidden;
 }
 .progress-line span {
@@ -385,7 +391,7 @@ body {
   background-color: #00eeff;
   position: absolute;
   border-radius: 10px;
-  width: 0;
+  width: 90%;
   animation: fillProgress 2s ease-in-out forwards;
 }
 .progress-line span::after {
@@ -449,7 +455,8 @@ body {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  gap: 20px;
+  justify-content: center;
   align-items: flex-start;
 }
 .radial-bars .radial-bar {
@@ -460,16 +467,16 @@ body {
 }
 .radial-bars .radial-bar svg {
   position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-90deg);
-  width: 200px;
-  height: 300px;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
 }
 .radial-bars .radial-bar .progress-bar {
   stroke-width: 10;
   stop-color: black;
-  fill: transparent;
+  fill: none;
   stroke-dashoffset: 502;
   stroke-dasharray: 502;
   stroke-linecap: round;
@@ -478,48 +485,42 @@ body {
 .path {
   stroke-width: 10;
   stroke: #0ef;
-  fill: transparent;
+  fill: none;
   stroke-dashoffset: 502;
   stroke-dasharray: 502;
   stroke-linecap: round;
+  animation: progress 1.5s ease-out forwards;
 }
 
 .path-1 {
-  animation: animate-path1 1s linear forwards;
+  stroke: #ff6347; stroke-dashoffset: calc(502 - (502 * 90) / 100); 
 }
 
 .path-2 {
-  animation: animate-path2 1s linear forwards;
+  stroke: #1e90ff; stroke-dashoffset: calc(502 - (502 * 65) / 100);
 }
 
 .path-3 {
-  animation: animate-path3 1s linear forwards;
+  stroke: #32cd32; stroke-dashoffset: calc(502 - (502 * 60) / 100);
 }
 
 .path-4 {
-  animation: animate-path4 1s linear forwards;
+  stroke: #ffcc00; stroke-dashoffset: calc(502 - (502 * 85) / 100);
 }
 .radial-bar .percentage {
   position: absolute;
-  top: 60%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 20px;
-  font-weight: 500;
-  animation: showText 0.5s 1.5s linear forwards;
-  opacity: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 .radial-bar .text {
-  position: absolute;
-  width: 100%;
   text-align: center;
-  left: 60%;
-  bottom: -8px;
-  transform: translate(-50px);
-  font-size: 17px;
-  font-weight: 500;
-  animation: showText 0.5s 1.5s linear forwards;
-  opacity: 0;
+  margin-top: 170px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
 }
 .html span {
   --progress-width: 90%;
@@ -987,6 +988,14 @@ form textarea {
   }
   100% {
     width: var(--progress-width);
+  }
+}
+@keyframes progress {
+  0% {
+    stroke-dashoffset: 502;
+  }
+  100% {
+    stroke-dashoffset: var(--dash-offset);
   }
 }
 @keyframes slideRight {
