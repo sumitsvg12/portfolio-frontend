@@ -10,7 +10,7 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://backend-portfolio-zgb9.onrender.com/api/contact', {
+      const response = await fetch(' ${process.env.https://backend-portfolio-zgb9.onrender.com}/api/projects', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -6,7 +6,7 @@ function Skills(){
         <>
          <h2 className="sub-title">My <span>Skills</span></h2>
          <section className="technical">
-                <div className="container1" id="skill">
+                <div className="container1 row-2" id="skill">
                     <h2 className="heading1">Technical Skills</h2>
                     <div className="Technical-bars">
                         <div className="bar"><FaHtml5 color="orange" />
@@ -68,7 +68,7 @@ function Skills(){
 
                     </div>
                 </div>
-                <div className="container1">
+                <div className="container1 row-2">
                     <h2 className="heading1">Professional Skills</h2>
                     <div className="radial-bars">
                         <div className="radial-bar">

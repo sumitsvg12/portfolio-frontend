@@ -330,10 +330,13 @@ body {
   flex-wrap: wrap;
 }
 .container1 {
-  width: 600px;
+  width: 50%;
   height: 500px;
   padding: 75px 90px;
   margin-left: 120px;
+}
+.row-2{
+  width: 50%;
 }
 
 .heading1 {
