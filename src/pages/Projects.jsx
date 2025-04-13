@@ -4,13 +4,18 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 
+
+
 function Projects(){
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
       const fetchProjects = async () => {
         try {
-          const response = await axios.get("${process.env.https://backend-portfolio-zgb9.onrender.com}/api/projects");
+          const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/projects`);
+          console.log("Backend URL:", process.env.REACT_APP_BACKEND_URL);
+
+
           setProjects(response.data);
         } catch (error) {
           console.error("Error fetching projects", error);

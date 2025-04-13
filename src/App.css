@@ -334,8 +334,7 @@ body {
 }
 .container1 {
   flex: 1 1 400px;
-  max-width: 500px;
-  background-color: #f8f9fa;
+  max-width: 600px;
   padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -348,8 +347,11 @@ body {
   font-size: 1.8rem;
   margin-bottom: 1.2rem;
   text-align: center;
-  color: #333;
+  color:#0ef;
   font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #00bcd4;
+  display: inline-block; 
 }
 .bar {
   font-size: 23px;
@@ -460,7 +462,7 @@ body {
   align-items: flex-start;
 }
 .radial-bars .radial-bar {
-  width: 50%;
+  width:40%;
   height: 250px;
   margin-bottom: 15px;
   position: relative;
@@ -517,10 +519,11 @@ body {
 }
 .radial-bar .text {
   text-align: center;
-  margin-top: 170px;
-  font-weight: 600;
+  margin-top: 140px;
+  justify-content: center;
+  font-weight: 500;
   font-size: 1rem;
-  color: #333;
+  color: #be1616;
 }
 .html span {
   --progress-width: 90%;
